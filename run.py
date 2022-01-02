@@ -1,83 +1,44 @@
-import random 
-from words import word_list
+# import random 
+# from words import word_list
 
-def get_word():
-    word = random.choice(word_list)
-    return word.upper()
+# def get_word():
+#    word = random.choice(word_list)
+#    return word.upper()
 
-print('get_word')
-
-
-
-def hangman_title():
-    print("""
-  _   _                                         
- | | | | __ _ _ __   __ _ _ __ ___   __ _ _ __  
- | |_| |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
- |  _  | (_| | | | | (_| | | | | | | (_| | | | |
- |_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
-                    |___/                       
-""")
+# print('get_word')
 
 
-HANGMANPICS = 
-    """ 
-    visual to show user hangman lives
-    """
-
-    ['''
-    +---+
-    |   |
-        |
-        |
-        |
-        |
-    =========''', '''
-    +---+
-    |   |
-    O   |
-        |
-        |
-        |
-    =========''', '''
-    +---+
-    |   |
-    O   |
-    |   |
-        |
-        |
-    =========''', '''
-    +---+
-    |   |
-    O   |
-    /|   |
-        |
-        |
-    =========''', '''
-    +---+
-    |   |
-    O   |
-    /|\  |
-        |
-        |
-    =========''', '''
-    +---+
-    |   |
-    O   |
-    /|\  |
-    /    |
-        |
-    =========''', '''
-    +---+
-    |   |
-    O   |
-    /|\  |
-    / \  |
-        |
-    =========''']
+# def hangman_title():
+#    print("""
+#  _   _                                         
+# | | | | __ _ _ __   __ _ _ __ ___   __ _ _ __  
+# | |_| |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+# |  _  | (_| | | | | (_| | | | | | | (_| | | | |
+# |_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+#                    |___/                       
+# """)
 
 
-def main():
-    hangman_title()
+# def main():
+#    hangman_title()
 
-main()
+# main()
+
+word = 'hangman'
+reveal = list(len(word)*'_')
+print(reveal)
+lives = 7
+gameWon = False
+
+while gameWon is False:
+    guess = input('Guess a letter or a word: ')
+    guess = guess.upper()
+
+    if guess == word:
+        gameWon = True
+
+
+if gameWon:
+    print('You win')
+else:
+    print('You failed, the word was', word)
