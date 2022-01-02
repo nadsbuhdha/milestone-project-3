@@ -30,12 +30,14 @@ print(reveal)
 lives = 7
 gameWon = False
 
-while gameWon is False:
+while gameWon is False and lives > 0:
     guess = input('Guess a letter or a word: ')
-    guess = guess.upper()
+    guess = guess
 
     if guess == word:
         gameWon = True
+    else:
+        lives -= 1
 
 
 if gameWon:
