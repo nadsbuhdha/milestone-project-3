@@ -36,6 +36,12 @@ while gameWon is False and lives > 0:
 
     if guess == word:
         gameWon = True
+    if len(guess) == 1 and guess in word:
+        for i in range(0, len(word)):
+            letter = word[i]
+            if guess == letter:
+                reveal[i]
+    
     else:
         lives -= 1
 
