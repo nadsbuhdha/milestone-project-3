@@ -6,15 +6,21 @@ from words import word_list
 import time
 
 def load_game():
+    """ 
+    start screen for game 
+    """
     hangman_title()
     player_name = input('Enter your name ' )
     print('Hello', player_name, 'lets play hangman!')
-    time.sleep(5)
+    time.sleep(6)
     play_game()
     
 
 
 def get_word():
+    """ 
+    gets random word from word list
+    """
     word = random.choice(word_list)
     return word.upper()
 
