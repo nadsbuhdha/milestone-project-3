@@ -1,4 +1,4 @@
-hangman = {
+hangman_graphic = {
 
     0: """
     -----^

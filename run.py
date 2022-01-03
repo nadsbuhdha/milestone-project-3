@@ -1,3 +1,5 @@
+import hangmanimg
+from hangmanimg import hangman_graphic
 # import random
 # from words import word_list
 
@@ -34,6 +36,7 @@ def play_game():
     lives = 7
     game_won = False
     while game_won is False and lives > 0:
+        print(hangman_graphic[7 - lives])
         print(reveal)
         print('you have', lives, 'lives left')
         guess = input('Guess a letter or a word: ').upper()
