@@ -25,6 +25,9 @@
 # main()
 
 def play_game():
+    """
+    logic for the main game
+    """
     word = 'hangman'
     word = word.upper()
     reveal = list(len(word)*'_')
@@ -32,7 +35,7 @@ def play_game():
     game_won = False
     while game_won is False and lives > 0:
         print(reveal)
-        print('you have', lives, 'goes left')
+        print('you have', lives, 'lives left')
         guess = input('Guess a letter or a word: ').upper()
         if guess == word:
             game_won = True
@@ -45,10 +48,11 @@ def play_game():
                 game_won = True
         else:
             lives -= 1
-        if game_won:
-            print('You win')
-        else:
+            
+        if lives == 0:
             print('You failed, the word was', word)
+        else:
+            print('You win!')
 
     
 play_game()
