@@ -1,12 +1,14 @@
 import hangmanimg
 from hangmanimg import hangman_graphic
 import os
-# import random
-# from words import word_list
+import random
+from words import word_list
 
-# def get_word():
-#    word = random.choice(word_list)
-#    return word.upper()
+def get_word():
+    word = random.choice(word_list)
+    return word.upper()
+  
+
 
 # print('get_word')
 
@@ -31,8 +33,7 @@ def play_game():
     """
     logic for the main game
     """
-    word = 'hangman'
-    word = word.upper()
+    word = get_word()
     reveal = list(len(word)*'_')
     lives = 7
     game_won = False
