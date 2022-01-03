@@ -26,13 +26,14 @@
 
 def play_game():
     word = 'hangman'
+    word = word.upper()
     reveal = list(len(word)*'_')
     lives = 7
     game_won = False
     while game_won is False and lives > 0:
         print(reveal)
         print('you have', lives, 'goes left')
-        guess = input('Guess a letter or a word: ')
+        guess = input('Guess a letter or a word: ').upper()
         if guess == word:
             game_won = True
         if len(guess) == 1 and guess in word:
