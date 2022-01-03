@@ -24,15 +24,14 @@
 
 # main()
 
-word = 'hangman'
-reveal = list(len(word)*'_')
-lives = 7
-gameWon = False
-
-while gameWon is False and lives > 0:
-    print(reveal)
-    guess = input('Guess a letter or a word: ')
-    guess = guess
+def play_game():
+    word = 'hangman'
+    reveal = list(len(word)*'_')
+    lives = 7
+    gameWon = False
+    while gameWon is False and lives > 0:
+        print(reveal)
+        guess = input('Guess a letter or a word: ')
 
     if guess == word:
         gameWon = True
@@ -46,9 +45,14 @@ while gameWon is False and lives > 0:
     
     else:
         lives -= 1
+    if gameWon:
+        print('You win')
+    else:
+        print('You failed, the word was', word)
 
 
-if gameWon:
-    print('You win')
-else:
-    print('You failed, the word was', word)
+play_game()
+
+
+
+
