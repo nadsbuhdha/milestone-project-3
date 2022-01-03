@@ -38,8 +38,8 @@ def play_game():
         if len(guess) == 1 and guess in word:
             for i in range(0, len(word)):
                 letter = word[i]
-            if guess == letter:
-                reveal[i] = guess
+                if guess == letter:
+                    reveal[i] = guess
             if '_' not in reveal:
                 game_won = True
         else:
