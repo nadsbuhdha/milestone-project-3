@@ -10,7 +10,7 @@ def load_game():
     start screen for game 
     """
     hangman_title()
-    player_name = input('Enter your name ' )
+    player_name = input('Welcome to Hangman! Enter your name to play ' )
     print('Hello', player_name, 'lets play hangman!')
     time.sleep(6)
     play_game()
@@ -48,6 +48,7 @@ def play_game():
     game_won = False
     while game_won is False and lives > 0:
         os.system('clear')
+        hangman_title()
         print(hangman_graphic[7 - lives])
         print(reveal)
         print('you have', lives, 'lives left')
@@ -66,9 +67,11 @@ def play_game():
             
     if lives == 0:
         os.system('clear')
+        hangman_title()
         print(hangman_graphic[7])
         print('You failed, the word was', word)
     else:
+        hangman_title()
         print('You win! The word was', word)
 
     
