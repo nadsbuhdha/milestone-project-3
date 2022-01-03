@@ -3,31 +3,34 @@ from hangmanimg import hangman_graphic
 import os
 import random
 from words import word_list
+import time
+
+def load_game():
+    hangman_title()
+    player_name = input('Enter your name ' )
+    print('Hello', player_name, 'lets play hangman!')
+    time.sleep(5)
+    play_game()
+    
+
 
 def get_word():
     word = random.choice(word_list)
     return word.upper()
-  
 
 
-# print('get_word')
+def hangman_title():
+    print("""
+ 
+  _   _                                         
+ | | | | __ _ _ __   __ _ _ __ ___   __ _ _ __  
+ | |_| |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+ |  _  | (_| | | | | (_| | | | | | | (_| | | | |
+ |_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                    |___/                       
 
+ """)
 
-# def hangman_title():
-#    print("""
-#  _   _                       
-# | | | | __ _ _ __   __ _ _ __ ___   __ _ _ __  
-# | |_| |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \
-# |  _  | (_| | | | | (_| | | | | | | (_| | | | |
-# |_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
-#                    |___/                 
-# """)
-
-
-# def main():
-#    hangman_title()
-
-# main()
 
 def play_game():
     """
@@ -63,4 +66,4 @@ def play_game():
         print('You win! The word was', word)
 
     
-play_game()
+load_game()
