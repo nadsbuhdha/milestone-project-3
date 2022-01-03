@@ -52,10 +52,11 @@ def play_game():
         else:
             lives -= 1
             
-        if lives == 0:
-            print('You failed, the word was', word)
-        else:
-            print('You win! The word was', word)
+    if lives == 0:
+        print(hangman_graphic[7])
+        print('You failed, the word was', word)
+    else:
+        print('You win! The word was', word)
 
     
 play_game()
