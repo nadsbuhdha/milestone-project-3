@@ -11,8 +11,10 @@ def load_game():
     """
     hangman_title()
     player_name = input('Welcome to Hangman! Enter your name to play ' )
+    os.system('clear')
+    hangman_title()
     print('Hello', player_name, 'lets play hangman!')
-    time.sleep(6)
+    time.sleep(5)
     play_game()
     
 
@@ -71,6 +73,7 @@ def play_game():
         print(hangman_graphic[7])
         print('You failed, the word was', word)
     else:
+        os.system('clear')
         hangman_title()
         print('You win! The word was', word)
 
