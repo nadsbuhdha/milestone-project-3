@@ -26,11 +26,11 @@
 
 word = 'hangman'
 reveal = list(len(word)*'_')
-print(reveal)
 lives = 7
 gameWon = False
 
 while gameWon is False and lives > 0:
+    print(reveal)
     guess = input('Guess a letter or a word: ')
     guess = guess
 
@@ -40,7 +40,9 @@ while gameWon is False and lives > 0:
         for i in range(0, len(word)):
             letter = word[i]
             if guess == letter:
-                reveal[i]
+                reveal[i] = guess
+            if '_' not in reveal:
+                gameWon = True
     
     else:
         lives -= 1
