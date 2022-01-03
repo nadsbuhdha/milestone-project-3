@@ -55,7 +55,7 @@ def play_game():
         if lives == 0:
             print('You failed, the word was', word)
         else:
-            print('You win!')
+            print('You win! The word was', word)
 
     
 play_game()
