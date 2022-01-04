@@ -1,26 +1,25 @@
-import hangmanimg
-from hangmanimg import hangman_graphic
 import os
 import random
-from words import word_list
 import time
+from words import word_list
+from hangmanimg import hangman_graphic
+
 
 def load_game():
-    """ 
-    start screen for game 
+    """
+    start screen for game
     """
     hangman_title()
-    player_name = input('Welcome to Hangman! Enter your name to play ' )
+    player_name = input('Welcome to Hangman! Enter your name to play ')
     os.system('clear')
     hangman_title()
     print('Hello', player_name, 'lets play hangman!')
     time.sleep(5)
     play_game()
-    
 
 
 def get_word():
-    """ 
+    """
     gets random word from word list
     """
     word = random.choice(word_list)
@@ -52,7 +51,7 @@ def play_game():
         os.system('clear')
         hangman_title()
         print(hangman_graphic[7 - lives])
-        print(reveal)
+        print(' '.join([str(e) for e in reveal]))
         print('you have', lives, 'lives left')
         guess = input('Guess a letter or a word: ').upper()
         if guess == word:
@@ -66,7 +65,7 @@ def play_game():
                 game_won = True
         else:
             lives -= 1
-            
+
     if lives == 0:
         os.system('clear')
         hangman_title()
@@ -77,5 +76,5 @@ def play_game():
         hangman_title()
         print('You win! The word was', word)
 
-    
+
 load_game()
