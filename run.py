@@ -52,10 +52,10 @@ def play_game():
         os.system('clear')
         hangman_title()
         print(hangman_graphic[7 - lives])
-        print(' '.join([str(e) for e in reveal]))
-        print('you have', lives, 'lives left')
-        print('you have used: ', ", ".join(guesses))
-        guess = input('Guess a letter or a word: ').upper()
+        print(' '.join([str(e) for e in reveal]) + '\n')
+        print('you have', lives, 'lives left\n')
+        print('you have used: ', ", ".join(guesses) + '\n')
+        guess = input('Guess a letter or a word: \n').upper()
         guesses.append(guess.upper())
         if guess == word:
             game_won = True
