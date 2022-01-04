@@ -71,10 +71,34 @@ def play_game():
         hangman_title()
         print(hangman_graphic[7])
         print('You failed, the word was', word)
+        reset_game()
     else:
         os.system('clear')
         hangman_title()
         print('You win! The word was', word)
+        reset_game()
+
+
+def reset_game():
+    """
+    restart the game after user has won or lost
+    """
+    restart_game = False
+
+    while restart_game is False:
+        restart = input('would you like to play again ? Enter Y or N ').upper()
+
+        if restart == 'Y':
+            restart_game = True
+            play_game()
+
+        elif restart == 'N':
+            restart_game = True
+            print('Thank you for playing, goodbye!')
+            load_game()
+        
+        else:
+            print('Please enter Y or N')
 
 
 load_game()
