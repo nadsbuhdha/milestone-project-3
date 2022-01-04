@@ -47,13 +47,16 @@ def play_game():
     reveal = list(len(word)*'_')
     lives = 7
     game_won = False
+    guesses = []
     while game_won is False and lives > 0:
         os.system('clear')
         hangman_title()
         print(hangman_graphic[7 - lives])
         print(' '.join([str(e) for e in reveal]))
         print('you have', lives, 'lives left')
+        print('you have used', guesses)
         guess = input('Guess a letter or a word: ').upper()
+        guesses.append(guess.upper())
         if guess == word:
             game_won = True
         if len(guess) == 1 and guess in word:
