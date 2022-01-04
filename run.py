@@ -54,7 +54,7 @@ def play_game():
         print(hangman_graphic[7 - lives])
         print(' '.join([str(e) for e in reveal]))
         print('you have', lives, 'lives left')
-        print('you have used', guesses)
+        print('you have used: ', ", ".join(guesses))
         guess = input('Guess a letter or a word: ').upper()
         guesses.append(guess.upper())
         if guess == word:
