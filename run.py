@@ -3,6 +3,8 @@ import random
 import time
 from words import word_list
 from hangmanimg import hangman_graphic
+import string
+alphabet = list(string.ascii_uppercase)
 
 
 def load_game():
@@ -55,7 +57,11 @@ def play_game():
         print(' '.join([str(e) for e in reveal]) + '\n')
         print('you have', lives, 'lives left\n')
         print('you have used: ', ", ".join(guesses) + '\n')
-        guess = input('Guess a letter or a word: \n').upper()
+        while True:
+            guess = input('Guess a letter or a word: \n').upper()
+            if guess in alphabet:
+                break
+            print('invalid input\n')
         guesses.append(guess.upper())
         if guess == word:
             game_won = True
