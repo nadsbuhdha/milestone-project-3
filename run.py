@@ -53,15 +53,15 @@ def play_game():
     while game_won is False and lives > 0:
         os.system('clear')
         hangman_title()
-        print(hangman_graphic[7 - lives])
+        print(hangman_graphic[7 - lives] + '\n')
         print(' '.join([str(e) for e in reveal]) + '\n')
         print('you have', lives, 'lives left\n')
         print('you have used: ', ", ".join(guesses) + '\n')
         while True:
-            guess = input('Guess a letter or a word: \n').upper()
-            if guess in alphabet:
+            guess = input('Guess a letter: \n').upper()
+            if guess in alphabet and len(guess) < 2:
                 break
-            print('invalid input\n')
+            print('Invalid input, please enter a letter\n')
         guesses.append(guess.upper())
         if guess == word:
             game_won = True
@@ -105,7 +105,6 @@ def reset_game():
             restart_game = True
             print('Thank you for playing, goodbye!')
             load_game()
-        
         else:
             print('Please enter Y or N')
 
