@@ -21,7 +21,7 @@ def load_game():
     os.system('clear')
     hangman_title()
     print('Hello', player_name, 'lets play hangman!')
-    time.sleep(5)
+    time.sleep(.3)
     play_game()
 
 
@@ -64,9 +64,12 @@ def play_game():
         print('you have used: ', ", ".join(guesses) + '\n')
         while True:
             guess = input('Guess a letter: \n').upper()
-            if guess in alphabet and len(guess) < 2:
+            if guess not in alphabet:
+                print('Invalid input, please enter a letter\n')
+            elif guess in guesses:
+                guess = print('You already guessed that guessed again ')
+            else:
                 break
-            print('Invalid input, please enter a letter\n')
         guesses.append(guess.upper())
         if guess == word:
             game_won = True
