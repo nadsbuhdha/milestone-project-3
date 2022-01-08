@@ -12,7 +12,12 @@ def load_game():
     start screen for game
     """
     hangman_title()
-    player_name = input('Welcome to Hangman! Enter your name to play ')
+    while True:
+        player_name = input('Enter your name to play ')
+        if player_name.isalpha():
+            break
+        else:
+            print("Please use only letters, try again")
     os.system('clear')
     hangman_title()
     print('Hello', player_name, 'lets play hangman!')
