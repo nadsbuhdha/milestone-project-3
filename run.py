@@ -12,6 +12,8 @@ def load_game():
     start screen for game
     """
     hangman_title()
+    print('Welcome to Hangman! \n')
+    print('Guess the word by inputting letters before the lives run out. \n')
     while True:
         player_name = input('Enter your name to play ')
         if player_name.isalpha():
