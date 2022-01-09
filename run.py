@@ -18,7 +18,7 @@ def load_game():
             break
         else:
             print("Please use only letters, try again")
-    os.system('clear')
+    os.system("cls" if os.name == "nt" else "clear")
     hangman_title()
     print('Hello', player_name, 'lets play hangman!')
     time.sleep(.3)
@@ -56,7 +56,7 @@ def play_game():
     game_won = False
     guesses = []
     while game_won is False and lives > 0:
-        os.system('clear')
+        os.system("cls" if os.name == "nt" else "clear")
         hangman_title()
         print(hangman_graphic[7 - lives] + '\n')
         print(' '.join([str(e) for e in reveal]) + '\n')
@@ -67,7 +67,7 @@ def play_game():
             if guess not in alphabet:
                 print('Invalid input, please enter a letter\n')
             elif guess in guesses:
-                guess = print('You already guessed that guessed again ')
+                guess = print('You already guessed ' + guess + ' guess again ')
             else:
                 break
         guesses.append(guess.upper())
@@ -84,13 +84,13 @@ def play_game():
             lives -= 1
 
     if lives == 0:
-        os.system('clear')
+        os.system("cls" if os.name == "nt" else "clear")
         hangman_title()
         print(hangman_graphic[7])
         print('You failed, the word was', word)
         reset_game()
     else:
-        os.system('clear')
+        os.system("cls" if os.name == "nt" else "clear")
         hangman_title()
         print('You win! The word was', word)
         reset_game()
