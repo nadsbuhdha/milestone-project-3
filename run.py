@@ -23,7 +23,7 @@ def load_game():
     os.system("cls" if os.name == "nt" else "clear")
     hangman_title()
     print('Hello', player_name, 'lets play hangman!')
-    time.sleep(.3)
+    time.sleep(4)
     play_game()
 
 
@@ -64,8 +64,8 @@ def play_game():
         hangman_title()
         print(hangman_graphic[7 - lives] + '\n')
         print(' '.join([str(e) for e in reveal]) + '\n')
-        print('you have', lives, 'lives left\n')
-        print('you have used: ', ", ".join(guesses) + '\n')
+        print('You have', lives, 'lives left\n')
+        print('You have used: ', ", ".join(guesses) + '\n')
         while True:
             guess = input('Guess a letter: \n').upper()
             if guess not in alphabet:
@@ -107,7 +107,7 @@ def reset_game():
     restart_game = False
 
     while restart_game is False:
-        restart = input('would you like to play again ? Enter Y or N ').upper()
+        restart = input('Would you like to play again ? Enter Y or N ').upper()
 
         if restart == 'Y':
             restart_game = True
