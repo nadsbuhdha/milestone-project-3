@@ -39,3 +39,40 @@ The user is then invited to input their first name. The user can only enter alph
 Once the user input their name, the game recognises the user and a short message is displayed to the user. The game then automatically starts. 
 
 ![alt text](assets/images/welcome_message.webp)
+
+Once the game has loaded, a hangman image appears
+
+![alt text](assets/images/hangman_image.webp)
+
+Once the game begins, a random word is generated from a list of words using the python random module. 
+The length of the words are then repensented by underlines to show how many letters are in the word. 
+
+![alt text](assets/images/guess_lines.webp)
+
+Displayed to the user, is the amount of lives the user has, which decreases every incorrect letter used, the letters the user has already used and the input for the user to guess a letter. 
+
+![alt text](assets/images/lives.webp)
+
+The user cannot guess the same letter more than once. A message is displayed to user if they try and use the same letter more than once and their guess is discounted. 
+
+![alt text](assets/images/guess_again.webp) 
+
+The user can only guess one letter at a time and cannot use any numbers or special characters. A message will displayed to the user if they try. 
+
+![alt text](assets/images/invalid_input.webp)
+
+If the user wins the game, a winners message is displayed to the user with the correct word in full. 
+
+![alt text](assets/images/win.webp)
+
+If the user loses the game, the completed hangman image is displayed with the correct word in full 
+
+![alt text](assets/images/failed.webp)
+
+Whether the user wins or loses the game they are presented with the option to play again or not. If they chose not to they will return to the home page. 
+
+Players can only enter Y or N otherwise an error message will be displayed and they'll be asked to enter a vaild input. 
+
+![alt text](assets/images/play_again.webp)
+
+
