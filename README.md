@@ -21,3 +21,21 @@ Once i considered these processes I created a flowchart to suppliment the proces
 
 ** INSERT IMAGE **
 
+## Features
+
+### Home Page
+
+The home page of the site features a hangman logo.
+
+![alt text](assets/images/hangman_logo.webp)
+
+The user is greated by a welcome message.
+
+Within the welcome message, there is a concise description of the rules of the game.
+The user is then invited to input their first name. The user can only enter alphabetic characters or the game will not regonise the users input. 
+
+![alt text](assets/images/start_menu.webp)
+
+Once the user input their name, the game recognises the user and a short message is displayed to the user. The game then automatically starts. 
+
+![alt text](assets/images/welcome_message.webp)

@@ -37,6 +37,9 @@ def get_word():
 
 
 def hangman_title():
+    """
+    hangman title to print
+    """
     print(
         """
 
