@@ -40,6 +40,8 @@ Once the user input their name, the game recognises the user and a short message
 
 ![alt text](assets/images/welcome_message.webp)
 
+### Main game
+
 Once the game has loaded, a hangman image appears
 
 ![alt text](assets/images/hangman_image.webp)
@@ -61,6 +63,8 @@ The user can only guess one letter at a time and cannot use any numbers or speci
 
 ![alt text](assets/images/invalid_input.webp)
 
+### Gameover
+
 If the user wins the game, a winners message is displayed to the user with the correct word in full. 
 
 ![alt text](assets/images/win.webp)
@@ -74,5 +78,16 @@ Whether the user wins or loses the game they are presented with the option to pl
 Players can only enter Y or N otherwise an error message will be displayed and they'll be asked to enter a vaild input. 
 
 ![alt text](assets/images/play_again.webp)
+
+### Clear Terminal
+
+A clear feature was implemented in order to keep the page clear and orderly for the user. 
+
+## Future Features
+
+Features that could be implemented for the future:
+* Game modes of easy medium and hard - the vocabulary difficulty of the word depends on the game mode
+* An 'Extreme' mode where there is a timer and users have a time limit to guess each question. 
+
 
 
