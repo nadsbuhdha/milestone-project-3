@@ -90,13 +90,13 @@ def play_game():
     if lives == 0:
         os.system("cls" if os.name == "nt" else "clear")
         hangman_title()
-        print(hangman_graphic[7])
-        print('You failed, the word was', word)
+        print(hangman_graphic[7]+'\n')
+        print('You failed, the word was', word + '\n')
         reset_game()
     else:
         os.system("cls" if os.name == "nt" else "clear")
         hangman_title()
-        print('You win! The word was', word)
+        print('You win! The word was', word + '\n')
         reset_game()
 
 
