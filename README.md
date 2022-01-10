@@ -109,4 +109,9 @@ each .py file was tested
 
 All .py files passed thought validation without any bugs. 
 
+## Manual testing 
+
+| Feature | Test | Outcome |
+|---------|------|---------|
+|Hangman logo | Displayed in terminal and heroku | Pass 
 
