@@ -15,7 +15,7 @@ def load_game():
     print('Welcome to Hangman! \n')
     print('Guess the word by inputting letters before the lives run out. \n')
     while True:
-        player_name = input('Enter your name to play ')
+        player_name = input('Enter your name to play:\n')
         if player_name.isalpha():
             break
         else:
@@ -67,7 +67,7 @@ def play_game():
         print('You have', lives, 'lives left\n')
         print('You have used: ', ", ".join(guesses) + '\n')
         while True:
-            guess = input('Guess a letter: \n').upper()
+            guess = input('Guess a letter:\n').upper()
             if guess not in alphabet:
                 print('Invalid input, please enter a letter\n')
             elif guess in guesses:
@@ -107,7 +107,7 @@ def reset_game():
     restart_game = False
 
     while restart_game is False:
-        restart = input('Would you like to play again ? Enter Y or N ').upper()
+        restart = input('Do you want to play again? Enter Y or N:\n').upper()
 
         if restart == 'Y':
             restart_game = True
