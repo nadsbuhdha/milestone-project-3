@@ -14,12 +14,13 @@ def load_game():
     hangman_title()
     print('Welcome to Hangman! \n')
     print('Guess the word by inputting letters before the lives run out. \n')
+    print('You can only guess one letter at a time. \n')
     while True:
-        player_name = input('Enter your name to play:\n')
+        player_name = input('Enter your first name to play:\n')
         if player_name.isalpha():
             break
         else:
-            print("Please use only letters, try again")
+            print("Please use only letters, try again\n")
     os.system("cls" if os.name == "nt" else "clear")
     hangman_title()
     print('Hello', player_name, 'lets play hangman!')
