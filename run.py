@@ -116,6 +116,7 @@ def reset_game():
         elif restart == 'N':
             restart_game = True
             print('Thank you for playing, goodbye!')
+            os.system("cls" if os.name == "nt" else "clear")
             load_game()
         else:
             print('Please enter Y or N')
