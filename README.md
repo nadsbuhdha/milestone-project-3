@@ -89,5 +89,24 @@ Features that could be implemented for the future:
 * Game modes of easy medium and hard - the vocabulary difficulty of the word depends on the game mode
 * An 'Extreme' mode where there is a timer and users have a time limit to guess each question. 
 
+## Testing
+
+The hangman python code was tested using the PEP8 validator 
+
+each .py file was tested 
+
+### run.py validation
+
+![alt text](assets/images/mainvalidated.webp)
+
+### hangmanimg.py validation
+
+![alt text](assets/images/hangmanvalidated.webp)
+
+### words.py validation 
+
+![alt text](assets/images/wordsvalidated.webp)
+
+All .py files passed thought validation without any bugs. 
 
 
