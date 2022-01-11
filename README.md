@@ -114,4 +114,16 @@ All .py files passed thought validation without any bugs.
 | Feature | Test | Outcome |
 |---------|------|---------|
 |Hangman logo | Displayed in terminal and heroku | Pass 
+|Game instructions | Clearly displayed | Pass
+|Input for user name | Sser can only enter alphabetic letters | Pass
+|Welcome message | Feedback message with users name displayed / messaged timed before game loads | Pass
+|Hangman graphic | Displayed and updated depending on correct or incorrect guess | Pass
+|User lives displayed | Lives updated when user inputs wrong guess | Pass
+|Letters used displayed | Updates and displays the letters the user has already input | Pass
+|Missing letters updated | correct letters guessed updated the '_' displayed | Pass
+|Guess letter input | User can only enter one alaphabetic at a time or error message displayed | Pass
+|Terminal clear | Terminal clears for cleaner user display | Pass
+|Game win or fail | Win or lose message displayed depending on whether user wins or loses | Pass
+|Replay | User has ability to replay or go to main menu | Pass
+|Replay input | User can only enter Y or N or error message displayed | Pass 
 

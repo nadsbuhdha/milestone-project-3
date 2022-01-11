@@ -1,9 +1,9 @@
 import os
 import random
 import time
+import string
 from words import word_list
 from hangmanimg import hangman_graphic
-import string
 alphabet = list(string.ascii_uppercase)
 
 
