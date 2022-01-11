@@ -19,7 +19,7 @@ I considered:
 
 Once i considered these processes I created a flowchart to suppliment the process of building. 
 
-** INSERT IMAGE **
+![alt text](assets/images/flow_chart.webp)
 
 ## Features
 
