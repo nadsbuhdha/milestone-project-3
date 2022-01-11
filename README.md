@@ -161,6 +161,23 @@ The steps for deploying the project were as follows:
 7. Deploy Branch was then clicked
 8. Once the app was successfully deployed message was shown the view button was clicked to redirect to the deployed app. 
 
+## Finished product 
+
+### Welcome Page
+![alt text](assets/images/Homepage_final.webp)
+
+### Welcome Message
+![alt text](assets/images/welcome_message_final.webp)
+
+### Gameplay Page
+![alt text](assets/images/gamepage_final.webp)
+
+### Losing Message
+![alt text](assets/images/you_lose_final.webp)
+
+### Winning Message
+![alt text](assets/images/you_win_final.webp)
+
 ## Technologies used 
 * Python was used to create the app.
 * Github / Gitpod & Heroku were used for creation and deployment of the site. 
