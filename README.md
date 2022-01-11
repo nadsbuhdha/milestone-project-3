@@ -1,5 +1,5 @@
 # Hangman
-insert images here
+![alt text](assets/images/amiresponsive.webp)
 
 ## Overview 
 
@@ -147,4 +147,29 @@ When put initially put through the PEP8 validator a no new newline at end of fil
 
 This was fixed by adding a newline at the end of the run.py file. 
 
-## Deployment 
+## Deployment
+
+This project was deplyed using codeinstituetes mock terminal for heroku
+
+The steps for deploying the project were as follows:
+1. Commited and pushed the project to github
+2. Created a new app in Heroku 
+3. Created a unique name for the app
+4. Selected "BuildPack" in settings and selected Python and Node.js in that order, ensuring Python was on top
+5. In the 'Config Var' settings The key PORT and the value 8000 were added. 
+6. Within the deployment settings, automatic deploy was selected ensuring the Heroku app was updated after each push. 
+7. Deploy Branch was then clicked
+8. Once the app was successfully deployed message was shown the view button was clicked to redirect to the deployed app. 
+
+## Technologies used 
+* Python was used to create the app.
+* Github / Gitpod & Heroku were used for creation and deployment of the site. 
+* PEP8 was used to validate the code. 
+* [Lucid Chart](https://lucid.app/) was used to create the flow chart
+
+## Credits
+
+* [This Video](https://www.youtube.com/watch?v=m4nEnsavl6w) was used as a starting point for the hangman game. The words from the words file were also used. 
+* [ASCII Art Generator](https://patorjk.com/software/taag/#p=display&f=Standard&t=Hangman%0A%0A) was used to create the Hangman title. 
+* https://stackoverflow.com/  was used to help find solutions to problems
+
