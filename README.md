@@ -127,3 +127,24 @@ All .py files passed thought validation without any bugs.
 |Replay | User has ability to replay or go to main menu | Pass
 |Replay input | User can only enter Y or N or error message displayed | Pass 
 
+## Bugs
+
+When initially creating the logic to restrict the user from inputting the same letter twice, the while loop created a bug which infinitely printed a message.
+
+![alt text](assets/images/infinate_print.webp)
+
+This bug was solved by rethinking the logic of the while loop. 
+
+![alt text](assets/images/infinate_print.webp)
+
+A bug which occurred with the user inputting their name was that the user could enter a number or special character as their user name. This was solved by creating a while loop that only allows users to enter letters. 
+
+![alt text](assets/images/enter_name.webp)
+
+
+When put initially put through the PEP8 validator a no new newline at end of file error was displayed
+![alt text](assets/images/no_rewrite.webp) 
+
+This was fixed by adding a newline at the end of the run.py file. 
+
+## Deployment 
