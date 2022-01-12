@@ -1,3 +1,6 @@
+"""
+random wordlist
+"""
 word_list = [
     'wares',
     'soup',

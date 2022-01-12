@@ -1,3 +1,6 @@
+"""
+hangman graphic
+"""
 hangman_graphic = {
 
     0: """
