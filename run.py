@@ -1,12 +1,12 @@
 """
 imports
 """
-import os
-import random
-import time
+import os  # operating system functionality
+import random  # random for randomising words
+import time  # control when a line of code in used
 import string
-from words import word_list
-from hangmanimg import hangman_graphic
+from words import word_list  # list of hangman wordss
+from hangmanimg import hangman_graphic  # hangman graphic for game
 alphabet = list(string.ascii_uppercase)
 
 
@@ -18,15 +18,18 @@ def load_game():
     print('Welcome to Hangman! \n')
     print('Guess the word by inputting letters before the lives run out. \n')
     print('You can only guess one letter at a time. \n')
+    # checks the user has entered an alphabetic letter for name
     while True:
         player_name = input('Enter your first name to play:\n')
         if player_name.isalpha():
             break
         else:
             print("Please use only letters, try again\n")
+    # clears the terminal
     os.system("cls" if os.name == "nt" else "clear")
     hangman_title()
     print('Hello', player_name, 'lets play hangman!')
+    # timer for welcome message
     time.sleep(4)
     play_game()
 
@@ -66,6 +69,7 @@ def play_game():
     lives = 7
     game_won = False
     guesses = []
+    # logic to run game
     while game_won is False and lives > 0:
         os.system("cls" if os.name == "nt" else "clear")
         hangman_title()
@@ -73,6 +77,7 @@ def play_game():
         print(' '.join([str(e) for e in reveal]) + '\n')
         print('You have', lives, 'lives left\n')
         print('You have used: ', ", ".join(guesses) + '\n')
+        # checks user has put in one letter at a time and not repeated
         while True:
             guess = input('Guess a letter:\n').upper()
             if guess not in alphabet:
@@ -93,7 +98,7 @@ def play_game():
                 game_won = True
         else:
             lives -= 1
-
+    # if the user loses
     if lives == 0:
         os.system("cls" if os.name == "nt" else "clear")
         hangman_title()
@@ -101,6 +106,7 @@ def play_game():
         print('You failed, the word was', word + '\n')
         reset_game()
     else:
+        # if the user wins
         os.system("cls" if os.name == "nt" else "clear")
         hangman_title()
         print('You win! The word was', word + '\n')
@@ -112,7 +118,7 @@ def reset_game():
     restart the game after user has won or lost
     """
     restart_game = False
-
+    # asks the user if they want to replay
     while restart_game is False:
         restart = input('Do you want to play again? Enter Y or N:\n').upper()
 
