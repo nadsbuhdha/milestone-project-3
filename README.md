@@ -188,7 +188,7 @@ The steps for deploying the project were as follows:
 
 ## Credits
 
-* [This Video](https://www.youtube.com/watch?v=m4nEnsavl6w) was used as a starting point for the hangman game. The words from the words file were also used. 
+* [This Video](https://www.youtube.com/watch?v=m4nEnsavl6w) was used as a starting point for the hangman game. The words from the words file and hangman graphic were also used. 
 * [ASCII Art Generator](https://patorjk.com/software/taag/#p=display&f=Standard&t=Hangman%0A%0A) was used to create the Hangman title. 
 * https://stackoverflow.com/  was used to help find solutions to problems
 
